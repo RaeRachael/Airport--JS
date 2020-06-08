@@ -3,6 +3,6 @@
 class Plane {
 
 
-  landAt(airport) {};
+  landAt(airport) { airport.landingOk(this) };
 
 };
