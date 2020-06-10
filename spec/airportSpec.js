@@ -26,4 +26,12 @@ describe('Airport', function(){
     expect(airport.planes()).toEqual([planeAlt]);
   });
 
+  it('prevents landing if at maximum capacity', function(){
+    for (i = 0; i < 101; i++) {
+      airport.landingOk(plane);
+    }
+    expect(airport.planes().length).toEqual(100);
+  });
+
+
 });
